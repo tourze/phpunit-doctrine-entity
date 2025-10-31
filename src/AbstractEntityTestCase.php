@@ -89,11 +89,9 @@ abstract class AbstractEntityTestCase extends TestCase
         );
 
         // 调用 setter
-        /** @phpstan-ignore-next-line */
         $entity->{$setter}($sampleValue);
 
         // 调用 getter 并断言
-        /** @phpstan-ignore-next-line */
         $this->assertSame($sampleValue, $entity->{$getter}());
     }
 
